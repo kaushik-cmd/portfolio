@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kaushik Reddy | Portfolio</title>
+    <style>
+        /* Import Custom Fonts */
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Regular.ttf') format('truetype');
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #1c1c1e;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #f4a261;
+        }
+
+        h2 {
+            color: #e76f51;
+        }
+
+        h3, h4 {
+            color: #2a9d8f;
+        }
+
+        a {
+            color: #e5e5e5;
+            text-decoration: none;
+        }
+
+        /* Hero Section with DP */
+        .hero-section {
+            text-align: center;
+            padding: 2em;
+            background-color: #222;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1em;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        .hero-text {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #f4a261;
+            animation: slideDown 2s ease-in-out;
+        }
+
+        .hero-subtitle {
+            color: #e9c46a;
+            animation: fadeInSubtitle 2s ease-in 1s;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 2em 5%;
+            margin: 1em auto;
+            max-width: 800px;
+            background-color: #333;
+            padding: 1em;
+            border-radius: 8px;
+            margin-bottom: 2em;
+        }
+
+        /* Skills Section */
+        .skill {
+            margin: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-name {
+            font-size: 1.1em;
+            color: #e9c46a;
+        }
+
+        .skill-bar {
+            background: #264653;
+            border-radius: 5px;
+            width: 60%;
+            height: 8px;
+            position: relative;
+        }
+
+        .skill-level {
+            background: #f4a261;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        /* Testimonials Section */
+        .testimonial {
+            margin: 1em 0;
+            background-color: #444;
+            padding: 1em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #a8dadc;
+        }
+
+        .testimonial-author {
+            margin-top: 0.5em;
+            color: #2a9d8f;
+        }
+
+        /* Case Study Section */
+        .case-study {
+            margin: 1em 0;
+            padding: 1em;
+            border-left: 4px solid #2a9d8f;
+            background-color: #444;
+        }
+
+        /* Milestones Section */
+        .milestone {
+            display: flex;
+            margin-bottom: 1em;
+        }
+
+        .milestone img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 1em;
+            transition: transform 0.3s;
+        }
+
+        .milestone-content {
+            max-width: 600px;
+        }
+
+        .milestone-content h3 {
+            color: #f4a261;
+        }
+
+        .milestone img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Blog Section */
+        .blog-post {
+            margin: 1em 0;
+            padding: 1em;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+        .blog-post h3 {
+            color: #f4a261;
+        }
+
+        .blog-description {
+            color: #ffffff;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #e5e5e5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #222;
+            color: #999;
+        }
+
+        footer a {
+            color: #f4a261;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .milestone {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .milestone img {
+                margin-bottom: 1em;
+            }
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with DP -->
+    <header class="hero-section">
+        <img src="Kaushik.png" alt="Sai Kaushik Reddy" class="dp">
+        <h1 class="hero-text">Sai Kaushik Reddy</h1>
+        <p class="hero-subtitle">Innovator | CTO | Drone Enthusiast</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section fade-in-section">
+        <h2>About Me</h2>
+        <p style="color: #ffffff;">I'm an 11th grader with a deep passion for technology and innovation. As the CTO of Ondine, I work with drones and web development to create meaningful solutions that make a difference in education and coastal management. I believe in the power of tech to shape a better world, and I’m excited to explore new possibilities that can improve lives and our environment.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2>Skills</h2>
+        <div class="skill">
+            <span class="skill-name">Technical Development</span>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">Entrepreneurship</span>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+            <span class="skill-name">Project Management</span>
+            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+        </div>
+    </section>
+
+    
+    <!-- Milestones Section -->
+    <section class="milestones-section">
+        <h2>Milestones & Achievements</h2>
+        <div class="milestone">
+            <img src="images/hackathon-win.jpg" alt="Hackathon Win">
+            <div class="milestone-content">
+                <h3>Amaravati Drone Summit Hackathon 2024 Winner</h3>
+                <p>Won the hackathon with a project focused on real-time drone monitoring for coastal management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blogs-section">
+        <h2>My Blogs</h2>
+        <div class="blog-post">
+            <h3>The Future of Drone Technology in Coastal Management</h3>
+            <p class="blog-description">An in-depth look at how drones can transform coastal monitoring, tracking illegal activities, and protecting marine life.</p>
+            <a href="https://www.linkedin.com/pulse/how-drones-shaping-future-coastal-management-kaushik-sai-vpdkf/?trackingId=Qrs7M5t%2BSIS1CiHMZVkzSg%3D%3D" target="_blank">Read More</a>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sai Kaushik Reddy. Designed with passion for innovation.</p>
+        <p>Find me on <a href="https://www.linkedin.com/in/saikaushik">LinkedIn</a></p>
+    </footer>
+</body>
+</html>
